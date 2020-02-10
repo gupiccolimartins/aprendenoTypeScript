@@ -1,4 +1,4 @@
-class View<T> {
+abstract class View<T> {
 
     private _elemento: Element;
 
@@ -14,10 +14,6 @@ class View<T> {
 
     }
 
-    template(modelo: T): string {
-
-        throw new Error('Você deve implementar o método template!');
-
-    }
+    abstract template(modelo: T): string
 
 }

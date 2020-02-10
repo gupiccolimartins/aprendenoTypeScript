@@ -32,7 +32,4 @@ class NegociacoesView extends View {
         
         `;
     }
-    update(modelo) {
-        this._elemento.innerHTML = this.template(modelo);
-    }
 }

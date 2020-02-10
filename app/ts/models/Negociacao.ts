@@ -1,6 +1,4 @@
-class Negociacao {
-
-
+export class Negociacao {
 
     constructor (private _data: Date, private _quantidade: number, private _valor: number){
         
@@ -29,6 +27,4 @@ class Negociacao {
         return (this._quantidade * this._valor);
 
     }
-
-
 }

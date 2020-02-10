@@ -1,16 +1,16 @@
 abstract class View<T> {
 
-    private _elemento: Element;
+    private _elemento: JQuery;
 
     constructor(seletor: string) {
 
-        this._elemento = document.querySelector(seletor);
+        this._elemento = $(seletor);
 
     }
 
     update(modelo: T): void {
 
-        this._elemento.innerHTML = this.template(modelo);
+        this._elemento.html(this.template(modelo));
 
     }
 

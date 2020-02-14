@@ -2,7 +2,7 @@ export function domInject(seletor: string) {
 
     return function(target: any, key:string) {
 
-        let elemento:JQuery;
+        let elemento: JQuery;
 
         const getter = function() {
 
@@ -13,5 +13,9 @@ export function domInject(seletor: string) {
             }
             return elemento;
         }
+
+        Object.defineProperty(target, key, {
+            get: getter
+        });
     }
 }
